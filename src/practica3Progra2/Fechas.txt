@@ -1,0 +1,30 @@
+Modelar el TAD fecha, una fecha está formada por 3 números enteros, cuyos valores deben
+comportarse de la siguiente manera:
+● Día, puede variar entre 1 y 30
+● Mes, puede variar entre 1 y 12
+● Año debe ser mayor a 1900
+Se desea que el TAD cumpla con las siguientes especificaciones:
+● Dada una fecha se pide saber cuántos días faltan para una fecha dada,
+● Dada una fecha y un período en días se desea saber qué fecha será.
+● Según el año de la fecha, decir si el año es bisiesto.
+
+/////////////////Especificacion///////////////////
+Valores:
+Integer dia;1<=dia<=31 depende del mes y febrero tambien.
+Integer mes;1<=mes<=12
+Integer anos;1900<= ano
+Integer anoValido=1990;
+Implementacion:
+public Fecha(Integer ano,Interger mes,Integer dia);Construye el objeto fecha.
+public  boolean esBisiesto();determina si la fecha es biciesto o no.
+public  static boolean esBisiesto(Integer ano);determina si el año es biciesto o no.
+public static Integer diasDelMes(Integer mes,Integer ano);Dice cuantos dias va a tener el mes.
+public Integer cuantosDias(Fecha fecha);Nos va a decir cuantos dias faltan para que llegue la fecha.
+public Integer diferenciaAnos(Interger ano);Sacamos cuantos dias da de diferencia hay entre un año y el otro
+public Integer mesesDias(Fecha fecha);Sacamos cuantos dias de diferencia hay entre un mes y el otro.
+public Fecha queFecha(Integer periodo);1<=periodo, Va a decirnos cual es la fecha final
+public void sumarMes(Integer cantidad);Suma a una fecha la cantidad de meses
+public void sumarDias (Integer cantidad);Suma dias,Aclaracion si se suma un dia mayor al mes se pasa de mes.
+public void sumarAno(Integer cantidad); Suma la cantidad de anos, si el ano es biciesto se suma 
+
+
