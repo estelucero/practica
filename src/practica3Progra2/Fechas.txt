@@ -1,12 +1,12 @@
-Modelar el TAD fecha, una fecha está formada por 3 números enteros, cuyos valores deben
+Modelar el TAD fecha, una fecha estÃ¡ formada por 3 nÃºmeros enteros, cuyos valores deben
 comportarse de la siguiente manera:
-● Día, puede variar entre 1 y 30
-● Mes, puede variar entre 1 y 12
-● Año debe ser mayor a 1900
+â—� DÃ­a, puede variar entre 1 y 30
+â—� Mes, puede variar entre 1 y 12
+â—� AÃ±o debe ser mayor a 1900
 Se desea que el TAD cumpla con las siguientes especificaciones:
-● Dada una fecha se pide saber cuántos días faltan para una fecha dada,
-● Dada una fecha y un período en días se desea saber qué fecha será.
-● Según el año de la fecha, decir si el año es bisiesto.
+â—� Dada una fecha se pide saber cuÃ¡ntos dÃ­as faltan para una fecha dada,
+â—� Dada una fecha y un perÃ­odo en dÃ­as se desea saber quÃ© fecha serÃ¡.
+â—� SegÃºn el aÃ±o de la fecha, decir si el aÃ±o es bisiesto.
 
 /////////////////Especificacion///////////////////
 Valores:
@@ -17,14 +17,13 @@ Integer anoValido=1990;
 Implementacion:
 public Fecha(Integer ano,Interger mes,Integer dia);Construye el objeto fecha.
 public  boolean esBisiesto();determina si la fecha es biciesto o no.
-public  static boolean esBisiesto(Integer ano);determina si el año es biciesto o no.
-public static Integer diasDelMes(Integer mes,Integer ano);Dice cuantos dias va a tener el mes.
-public Integer cuantosDias(Fecha fecha);Nos va a decir cuantos dias faltan para que llegue la fecha.
-public Integer diferenciaAnos(Interger ano);Sacamos cuantos dias da de diferencia hay entre un año y el otro
-public Integer mesesDias(Fecha fecha);Sacamos cuantos dias de diferencia hay entre un mes y el otro.
-public Fecha queFecha(Integer periodo);1<=periodo, Va a decirnos cual es la fecha final
-public void sumarMes(Integer cantidad);Suma a una fecha la cantidad de meses
-public void sumarDias (Integer cantidad);Suma dias,Aclaracion si se suma un dia mayor al mes se pasa de mes.
-public void sumarAno(Integer cantidad); Suma la cantidad de anos, si el ano es biciesto se suma 
+public  static boolean esBisiesto(Integer ano);determina si el aÃ±o es biciesto o no.
+public Integer diferenciaDias(Fecha fecha); es determinar la difrencia de fechas.
+public Fecha queFechaSera(Fecha fecha);Nos dice la fecha que va a quedar.
+public void pasarmes();v aa pasar el ems de la fecha 
+public viud pasarDia(); va a pasar el dia de la fecha;
+public pasarAno(); va a psar el ano de la fecha;
+public boolean equals (Fecha fecha); ver si las fechas son iguales;
 
 
+public void pasoMes();
