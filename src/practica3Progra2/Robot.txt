@@ -1,0 +1,27 @@
+Crear un TAD robot, un robot está dado por su posición en el plano, X e Y, ambas son números enteros.
+Puede moverse sobre el plano siguiendo esta especificaciones:
+● Puede avanzar en línea recta una cantidad de posiciones determinada, si no se indica cuántas posiciones debe avanzar, deberá avanzar una sola.
+● No puede retroceder.
+● Puede girar a izquierda o derecha.
+● Se debe poder informar en todo momento la posición del robot.
+Suponer que el plano es infinito (o sea, no se pide controlar que se salga del plano).
+Inicialmente está en la posición 0,0.
+
+//////////////////////////////////////Especificacion//////////////////////////
+-Tad robot:
+*Valores:
+Tupla<Integer,Integer> posicion;Esta es la posicion del robot.
+Integer direccion;Con un numero nos dice la direccion(0 derecha,1 arriba,2 izquierda ,3 abajo);
+
+*Operaciones:
+public Robot();Construye el robot en (0,0) a partir de una tupla. y construye la direccion del robot apuntando a la derecha
+public boolean avanzar(Integer x);Esta funcion deja avanzar al robot en direccion que apunta.
+public boolean avanzarX(Integer x);Avanzar en x con una direccion(en el caso de positvo derecha y negativo izquierda).
+public boolean avanzarX(Integer y);Avanzar en y con una direccion(en el caso de positvo arriba y negativo abajo).
+public boolean estaRetrocediendo(Integer x);Verifica si el robot esta retrocediendo.
+public void transformarPasos(Interger x);Transforma los pasos en positivo o negativo segun la direccion.  
+public void girarR();Deja al robot girar a la derecha.
+public void giararL();Deja al robot girar a la izquierda.
+public String informarPosicion();Informa la posicion actual del robot. 
+public Interger informarDireccion();Informa la direccion actual del robot.
+public  void imprimir();Imprime la direccion y la posicion del robot.

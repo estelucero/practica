@@ -1,0 +1,40 @@
+Implementar una Agenda de personas basada en el TAD diccionario
+El acceso a la agenda se hace por el DNI de la persona (será la Clave del Diccionario) y un
+significado (o Valor) con los datos que interesan de esa persona:
+Su Nombre que es una cadena (String), su teléfono (Integer) y su dirección (String).
+Ayuda: Considerar el utilizar otro TAD como abstracción del significado de cada entrada del
+diccionario. Se puede modificar el TAD Diccionario, de manera que la firma de la operación de
+agregar una nueva entrada sea:
+
+
+/////////////////Especificacion///////////////////
+-Tad diccionario:
+*Valores:
+private Diccionaio <String,Tad Perona> agenda;
+
+*Operaciones:
+public Agenda();Constructor de la agenda vacia.
+public String devolverDatos(String dni);Nos devuelve los datos de la persona.
+public Interger numeroDe(String dni);Nos devuelve el numero de la persona.
+public Persona[] devolverAgenda();Nos devuelve toda la agenda.
+public boolean agregar(String dni,Persona persona);agregamos una persona en la agenda.
+public boolean eliminar(String dni);Va a eliminar a la persona de la agenda.
+public void cambiarNumero(String dni,Integer numero);Va a cambiarle el numero de la persona.
+public void cambiarNombre(String dni,String nombre);Va a cambiarle el nombre de la persona.
+public void cambiarDireccion(String dni,String direccion);Va a cambiarle la direccion de la persona.
+public void imprimir(String dni);Imprimir los datos de la persona.
+-Tad Persona:
+*Valores:
+private String nombre;
+private Integer numero;
+private String direccion;
+
+*Operaciones:
+public Persona(String nombre,Integer numero,String direccion);Es el constructor de la persona.
+public String getNombre();Nos devuelve el nombre de la persona.
+public Integer getNumero();Nos devuelve el numerod de la persona.
+public String getString();Nos devuelve la direccion de la persona.
+Para cada uno va a haber un setter.
+public String datosPersona();Nos devuelve los datos de la persona.
+
+
