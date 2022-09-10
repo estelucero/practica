@@ -187,7 +187,7 @@ public class Ahorcado {
 
 	public boolean acertoLetra(String letra) {
 
-		if (this.palabra.indexOf(letra.charAt(0)) != -1) {
+		if (this.palabra.indexOf(letra.charAt(0)) != -1 && this.palabraEscondida.indexOf(letra.charAt(0)) == -1) {
 			return true;
 		}
 		return false;
@@ -224,7 +224,7 @@ public class Ahorcado {
 
 	public void imprimir() {
 		int intentos = 6 - this.errores;
-		System.out.println(this.palabraEscondida + "            Los intentos que tiene son:" + intentos);
+		System.out.println(this.palabraEscondida + "            Los intentos que tiene son:" + intentos+"         Los puntos que tiene son:"+this.puntos);
 
 	}
 
