@@ -75,7 +75,7 @@ public class Ahorcado {
 
 		}
 		if (this.gano) {
-			System.out.print("Felicidades!! Usted adivino la palabra");
+			System.out.println("Felicidades!! Usted adivino la palabra");
 		} else {
 			System.out.println("Usted perdio la palabra era:" + this.palabra);
 

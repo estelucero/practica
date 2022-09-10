@@ -5,8 +5,9 @@ import static org.junit.Assert.assertFalse;
 public class main {
 
 	public static void main(String[] args) {
-	Ahorcado juego=new Ahorcado("Marron");
-	juego.jugando();
+	String[] palabras= {"hola","chau"};
+	JuegoAhorcado juego=new JuegoAhorcado(palabras);
+	juego.empezarJuego();
 	}
 
 }

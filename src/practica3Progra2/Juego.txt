@@ -1,0 +1,23 @@
+A partir de la interfaz del TAD Ahorcado diseñado en el punto anterior se pide crear el juego. Para
+ello se pide modelar el TAD Juego (especificar y definir interfaz) y luego implementarlo, utilizando el
+TAD Ahorcado del ejercicio anterior.
+El Juego debe respetar las siguientes indicaciones:
+● Se deberá contar inicialmente con 10 palabras para crear una partida.
+● Se seleccionará una palabra al azar al momento de crearla.
+● Las palabras que se van utilizando, no deben volver a salir.
+● Cuando se hayan usado todas las palabras, todas vuelven a estar disponibles
+/////////////////Especificacion////////
+*Valores:
+Ahoracado ahorcado;Es el juego del ahorcado;
+String[] palabras;Aca van a estar la palabras.
+ArrayList<String> listaActualizable;Aca va a estar la lista con las palabras que se van a poder jugar.
+boolean seguirJugando;Nos dice si se quiere seguir jugando o no.
+*Implementacion:
+public void empezarJuego();Empieza el juego jeje.
+public void sacarDeLaLista(Integer indice);Va a sacar de listaActualizable la palabra.
+public void reiniciarLista();Va a agregar todas las palabras a listaActualizable;
+public boolean terminoDeJugar();Verifica si el juego deja de ejecutarse.
+public Integer ingresarOpcion();Nos da la opcion.
+public boolean OpcionValida();Verifica si la opcion es valida.
+ 
+public boolean listaVacia();Verifica si la lista esta vacia.
