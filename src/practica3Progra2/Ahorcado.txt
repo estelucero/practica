@@ -1,0 +1,41 @@
+En el juego del ahorcado a partir de una palabra secreta, el jugador debe adivinar esta palabra,
+arriesgando las letras que la componen. Si luego de una cantidad de intentos no lo hizo entonces
+pierde.
+Modelar el juego, para lo cual se dan las siguientes indicaciones:
+● Una partida se crea con una palabra inicial.
+● El jugador arriesga una letra y el juego le debe informar si acertó o no, en caso de que lo haga,
+muestra cómo se va completando la palabra, si no acierta se contabiliza como error y luego de 6
+errores pierde.
+● Si la letra no era correcta también se debe informar al jugador, cuantos intentos le quedan. En
+cualquier momento el jugador puede arriesgar la palabra, si no acierta pierde un punto. La
+partida finaliza porque se le acabaron los intentos o porque adivinó la palabra.
+1) Realizar la especificación y la interfaz.
+2) Implementarlo creando la clase Ahorcado en Java.
+
+
+//////////////////Especifiacion///////////////////
+-Tad ahorcado:
+*Valores:
+private String palabra;La palabra a adivinar.
+private Integer puntos;Puntos del usuario.
+private Integer errores;Cuenta los errores del usuario.
+private boolean jugando;
+private boolean gano;
+ArrayList<String> palabraEscondida;
+*Operaciones:
+public Ahorcado(String palabra);Crea al ahorcado con la palabra, 0 errores y 0 puntos.
+public void jugando();Inicia el juego.
+public String esconderPalabra(String palabra);Esto hace que el array palabraEscondida se la palbra a adivinar pero escondida.
+
+public boolean completoPalabra();Ve si el usuario completo la palabra.
+public boolean perdio();Verifica si el usuario perdio o sea tiene 6 errores o arriesgo la palabra.
+public void adivinar(char letra);Sirve para que el usuario ingrese la letra que quiere adivinar.
+public boolean acerto(char letra);Verifica si el usuario acerto la letra.
+public void restarIntento();Va a sumar la cantidad de errores al usuario.
+public void aparecerLetra(char letra);Hace que aparezca la letra en la variable palabraEscondida.
+public void sumarPuntos(Integer puntos);Suma puntos en la variable si acerto una letra.
+public boolean quiereAdivinarPalabra(Integer opcion);Nos dice si el usuario quiere adivinar la palbra.
+public void adivinar(String palabra);Aca el usuario va a ingresar la palabra para adivinar.
+public boolean acerto(String palabra);Verifica si el usuario acerto la palabra.
+public String generarSalida();Genera la salida para imprimir.
+public void imprimir();Imprimir los intentos que le queda al usuario, la palabra escondida y si quiere arriesga a tiara la palabra.
