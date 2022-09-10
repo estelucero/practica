@@ -1,0 +1,44 @@
+Necesitamos crear el TAD para comprobar si un ciudadano tiene el esquema de vacunación
+COVID completa.
+El esquema de vacunación está completo cuando tiene dos dosis aplicadas. Se registrará el
+número de documento del ciudadano y la cantidad de dosis aplicadas.
+Considerar que las dosis se aplican en distinto momento.
+Las situaciones posibles de un ciudadano son:
+No inició la vacunación (No posee vacunas)
+Esquema de vacunación incompleto (1 dosis)
+Esquema de vacunación completo (2 dosis)
+Primer refuerzo (3 dosis)
+Segundo refuerzo (4 dosis)
+Se debe informar la situación actual cuando se consulta por un ciudadano en particular.
+b) Cómo se modifica el TAD anterior si además se desea registrar la fecha en que se aplicó cada
+dosis y cuál fue la vacuna aplicada.
+
+
+////////////////////////Especificacion////////////////
+-Tad covid sin fecha:
+*Valores:
+Map<String,Persona> lista;Aqui estan guardadas las personas con primero su documento y luego la persona.
+Integer Maxdosis;La ultima dosis posible que se puede dar la persona.
+*Operaciones:
+public String esquemaVacunacion(String dni);Nos devuelve el esquema de vacunacion que tiene.
+public String ultimaDosis(String dni);Nos va a decir la ultima dosis de la persona.
+public boolean agregarVacuna(String dni,Integer dosis);Vamos a agregar la dosis a la pesona.
+public boolean dosisValida(Integer dosis);Verifica si la dosis existe;
+public boolean agregarPersona(String dni,Persona persona);Agrega una persona a la cartilla.
+public boolean personaExiste(String dni);Verifica si la persona existe.
+-Tad persona sin fecha:
+*Valores:
+String dni;Va a tener el dni de la persona.
+String apellido;Apellido de la persona
+String nombre;Nombre de la persona.
+Set<String> cartilla;Es la cantidad de vacunas que tiene sin repetirse.
+Integer ultimaDosis;Aca guardamos la ultima dosis de la persona.
+*Operacion:
+public String getUltimaDosis();Nos devuelve la ultima dosis.
+
+public boolean agregarDosis();Vamos a agregar una dosis al set.
+
+
+
+
+
