@@ -42,7 +42,35 @@ public String getUltimaDosis();Nos devuelve la ultima dosis.
 
 public boolean agregarDosis();Vamos a agregar una dosis al set.
 
+///////////////////////////////////////////////
+-Tad persona con fecha:
+*Valores:
+String dni;Va a tener el dni de la persona.
+String apellido;Apellido de la persona
+String nombre;Nombre de la persona.
+Map<Integer,String> cartilla;Es la cantidad de vacunas que tiene sin repetirse y con su fecha.
+Integer ultimaDosis;Aca guardamos la ultima dosis de la persona.
+*Operacion:
+public Integer getUltimaDosis();Nos devuelve la ultima dosis.
+public String getFecha(Integer dosis);Nos dice la fecha segun la dosis. 
+public boolean agregarDosis(Integer dosis,String fecha);Vamos a agregar una dosis al diccionario y una fecha de cuando se la dio.
+public getDni();Devuelve el dni.
 
-
+-Tad covid sin fecha:
+*Valores:
+Map<String,Persona> lista;Aqui estan guardadas las personas con primero su documento y luego la persona.
+Integer Maxdosis;La ultima dosis posible que se puede dar la persona.
+private Map<Integer,String> esquemas;
+*Operaciones:
+public String esquemaVacunacion(String dni);Nos devuelve el esquema de vacunacion que tiene.
+public String ultimaDosis(String dni);Nos va a decir la ultima dosis de la persona.
+public boolean agregarVacuna(String dni,Integer dosis,String fecha);Vamos a agregar la dosis a la pesona.
+public boolean dosisValida(Integer dosis);Verifica si la dosis existe;
+public boolean agregarPersona(String dni,Persona persona);Agrega una persona a la cartilla.
+public boolean personaExiste(String dni);Verifica si la persona existe.
+public boolean dosisValida();nos dice si la dosis es valida.
+public Map<Integer,String> esquemaVacunacion();Vamos a agregar el esquema de vacunacion a la variable de instancia.
+public String getFechaDosis(String dni,Integer dosis);Nos dice cuando se dio la vacuna.
+public void cartillaVacunacion(String dni);Nos da las dosis que tiene una persona con su fecha. 
 
 
