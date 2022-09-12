@@ -4,11 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PersonaCovidSinFecha {
-	String dni;
-	String apellido;
-	String nombre;
-	Set<Integer> cartilla;
-	Integer ultimaDosis;
+	private String dni;
+	private String apellido;
+	private String nombre;
+	private Set<Integer> cartilla;
+	private Integer ultimaDosis;
 	public PersonaCovidSinFecha(String dni,String apellido,String nombre) {
 		this.dni=dni;
 		this.nombre=nombre;
@@ -17,9 +17,9 @@ public class PersonaCovidSinFecha {
 		this.cartilla=new HashSet<Integer>() ;
 	}
 	public Integer getUltimaDosis() {
-		return this.getUltimaDosis();
+		return this.ultimaDosis;
 	}
-	public boolean agregarDosis(Integer dosis) {
+	 boolean agregarDosis(Integer dosis) {
 		if(cartilla.contains(dosis)) {
 			return false;
 		}
@@ -28,4 +28,7 @@ public class PersonaCovidSinFecha {
 		return true;
 		
 	}
+	 public String getDni() {
+		 return this.dni;
+	 }
 }

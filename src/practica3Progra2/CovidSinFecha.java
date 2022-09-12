@@ -5,21 +5,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CovidSinFecha {
-	HashMap<String,PersonaCovidSinFecha> lista;
-	Integer Maxdosis;
-	Map<Integer,String> esquemas;
-	public CovidSinFecha(HashMap<Integer,String> esquema) {
+	private HashMap<String,PersonaCovidSinFecha> lista;
+	private Integer Maxdosis;
+	private Map<Integer,String> esquemas;
+	public CovidSinFecha() {
 		this.lista=new HashMap<String,PersonaCovidSinFecha>();
-		this.Maxdosis=esquema.size();
-		this.esquemas= esquema;
+		this.esquemas= this.esquemaVacunacion();
+		this.Maxdosis=this.esquemas.size();
+		
 		
 	}
 	
-	public boolean agregarPersona(String dni,PersonaCovidSinFecha persona) {
-		if(this.personaExiste(dni)) {
+	public boolean agregarPersona(PersonaCovidSinFecha persona) {
+		if(this.personaExiste(persona.getDni())) {
 			return false;
 		}
-		this.lista.put(dni, persona);
+		this.lista.put(persona.getDni(), persona);
 		return true;
 	}
 	
@@ -35,7 +36,7 @@ public class CovidSinFecha {
 		return this.lista.containsKey(dni);
 	}
 	public boolean dosisValida(Integer dosis) {
-		return this.Maxdosis>=dosis?true:false;
+		return this.Maxdosis>dosis?true:false;
 	}
 	public Integer ultimaDosis(String dni) {
 		return this.lista.get(dni).getUltimaDosis();
@@ -44,6 +45,16 @@ public class CovidSinFecha {
 	public String esquemaVacunacion(String dni) {
 		return this.esquemas.get(this.ultimaDosis(dni));
 		
+	}
+	
+	public Map<Integer,String> esquemaVacunacion(){
+		Map salida=new HashMap<Integer,String>();
+		salida.put(0, "No inició la vacunación");
+		salida.put(1, "Esquema de vacunación incompleto");
+		salida.put(2, "Esquema de vacunación completo" );
+		salida.put(3, "Primer refuerzo");
+		salida.put(4, "Segundo refuerzo");
+		return salida;
 	}
 	
 	

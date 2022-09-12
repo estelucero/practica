@@ -19,6 +19,7 @@ dosis y cuál fue la vacuna aplicada.
 *Valores:
 Map<String,Persona> lista;Aqui estan guardadas las personas con primero su documento y luego la persona.
 Integer Maxdosis;La ultima dosis posible que se puede dar la persona.
+private Map<Integer,String> esquemas;
 *Operaciones:
 public String esquemaVacunacion(String dni);Nos devuelve el esquema de vacunacion que tiene.
 public String ultimaDosis(String dni);Nos va a decir la ultima dosis de la persona.
@@ -26,6 +27,9 @@ public boolean agregarVacuna(String dni,Integer dosis);Vamos a agregar la dosis 
 public boolean dosisValida(Integer dosis);Verifica si la dosis existe;
 public boolean agregarPersona(String dni,Persona persona);Agrega una persona a la cartilla.
 public boolean personaExiste(String dni);Verifica si la persona existe.
+public boolean dosisValida();nos dice si la dosis es valida.
+public Map<Integer,String> esquemaVacunacion();Vamos a agregar el esquema de vacunacion a la variable de instancia.
+
 -Tad persona sin fecha:
 *Valores:
 String dni;Va a tener el dni de la persona.
